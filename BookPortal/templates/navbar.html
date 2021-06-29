@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="../static/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../static/css/navbar.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+	<nav>
+		<ul>
+			<li class="logo">Logo</li>
+			<li class="btn"><span class="fas fa-bars"></span></li>
+			<div class="items">
+				<li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+				<li><a href="#"><i class="fas fa-book"></i> Sell Books</a></li>
+				<li><a href="#"><i class="fas fa-shopping-cart"></i> My Cart</a></li>
+			</div>
+			<div class="dropdown">
+				<a class="user-login" href="loginbook.html"><i class="fas fa-user"></i> Login</a>
+				<div class="dropdown-content">
+					<a href="/myBooks">My Books</a>
+					<a href="#">My Orders</a>
+					<a href="#">LogOut</a>
+				</div>
+			</div>
+		</ul>
+	</nav>
+	<main>
+		<!-- Add Main code Here -->
+	</main>
+	<script>
+		$('nav ul li.btn span').click(function () {
+			$('nav ul div.items').toggleClass("show");
+			$('nav ul li.btn span').toggleClass("show");
+		});
+	</script>
+</body>
+
+</html>

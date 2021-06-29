@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="{% static 'css/loginbook.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+
+</head>
+<body>
+    <img src="{% static 'images/Shelftons.png' %}" style="width:10%; height:10%; padding:20px">
+    <div class="main">
+      <h1 class="sign" align="center">Sign in</h1>
+      <p class="sign" style="text-align: center;">{{msg}}</p>
+      <form class="form1" action='login' method="POST">
+        {% csrf_token %}
+        <input class="un " id="username" type="text" align="center" placeholder="Username" required name='username'>
+        <input class="pass" type="password" id="password" align="center" placeholder="Password" required name='password'>
+        <input type="submit" class="submit" align="center" value="Log in"><br>
+        <br>
+        <br>
+        <a class="submit" align="center" href="register">Sign up</a>
+
+        <p class="forgot" align="center"><a href="#">Forgot Password?</p>
+
+      </div>
+
+  </body>
+</html>
+
+
+
+
